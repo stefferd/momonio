@@ -4,7 +4,7 @@ block content
   - let features = 0;
   .inner_content
     .logo
-      img.logo-img(src="/images/yomonio-logo.png" alt="Yomonio")
+      img.logo-img(src="/images/logo-momonio.png" alt="Momonio")
     .is-full
       if blocks && blocks.length > 0
         each block in blocks
@@ -13,7 +13,7 @@ block content
               .column-1=" "
               .column-5
                 p #{block.items[1].content}
-                button.button.button--primary(src="#interesse" title=block.items[0].content) #{block.items[0].content}
+                a.button.button--primary(href="#interesse" title=block.items[0].content) #{block.items[0].content}
               .column-2=" "
               .column-3
                 img(src=`/uploads/${block.items[2].content}` title="hero image")
@@ -44,18 +44,18 @@ block content
                 .column-4.center-align
                   img(src=`/uploads/${block.items[2].content}` title="feature image")
             else
-              .row.feature
-                .column-1=" "
-                .column-3
+              .row.feature.center-align
+                .column-2=" "
+                .column-8
                   h2 #{block.items[0].content}
                   p #{block.items[1].content}
-                .column-4=" "
-                .column-4.right-align
                   img(src=`/uploads/${block.items[2].content}` title="feature image")
+                .column-2=" "
       .row.interesse
         .column-2=" "
         .column-8.center-align
-          h2 Interesse? De Yomonio app is nog niet helemaal klaar
+          a(name="interesse")
+          h2 Interesse? De Momonio app is nog niet helemaal klaar
           p Maar als je je e-mailadres achterlaat, zorgen we dat jij de app als eerste kunt gebruiken
           if (!savedInterested)
             form.form(method="POST" action="/")

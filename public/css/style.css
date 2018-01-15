@@ -1292,6 +1292,10 @@ em {
     .feature.feature-bg img {
       margin: 8% 0 0 0;
       vertical-align: bottom; }
+  .feature.center-align {
+    padding: 5% 0 0 0; }
+    .feature.center-align h2 {
+      margin-top: 0; }
   .feature h2 {
     margin-top: 25%;
     font-weight: 300;

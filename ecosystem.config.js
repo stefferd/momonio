@@ -7,11 +7,11 @@ module.exports = {
 
         // First application
         {
-            name      : "Yomonio",
+            name      : "Momonio",
             script    : "./index.js",
             env: {
-                PORT: "3005",
-                MONGODB_URI: "mongodb://yomonio-ad:corvettE8@ds251827.mlab.com:51827/yomonio",
+                PORT: "3006",
+                MONGODB_URI: "mongodb://momonio-db:corvettE8@ds251807.mlab.com:51807/momonio",
                 SECRET: "DexIsEenBaasEnLivIsEenBazin",
                 KEY: "Dexperts2015"
             }
