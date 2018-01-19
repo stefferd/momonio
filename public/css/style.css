@@ -1149,13 +1149,13 @@ img {
 body {
   color: #5E6977;
   font-size: 100%;
-  font-family: 'Roboto', serif;
+  font-family: Helvetica, serif;
   font-weight: 300;
   line-height: 1.6; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', serif;
-  font-weight: 500; }
+  font-family: Helvetica, serif;
+  font-weight: 700; }
 
 h1, h2 {
   line-height: 1.1; }
@@ -1181,7 +1181,7 @@ h5 {
   font-size: 130%; }
 
 .fixed {
-  font-family: 'Roboto', serif;
+  font-family: Helvetica, serif;
   font-size: 14px;
   line-height: 1.1; }
 
@@ -1220,7 +1220,9 @@ h5 {
 .logo {
   position: absolute;
   top: 5%;
-  left: 5%; }
+  left: 1%;
+  width: 151px;
+  height: 59px; }
 
 .hero {
   background-color: #ef869c;
@@ -1231,15 +1233,27 @@ h5 {
     margin-top: 25%;
     font-size: 1.4em; }
   .hero .button--primary {
-    background-color: #18d3a2;
+    width: 231px;
+    height: 47px;
+    border-radius: 4px;
+    background-color: #3fd3a2;
+    border: 1px solid #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
     text-align: center;
-    color: #2B2B2B;
-    border: 1px solid #9ad1bf;
-    margin: 10px 0;
-    font-weight: 500;
-    font-size: 1.6em;
-    line-height: 1.2;
-    width: auto; }
+    color: #ffffff;
+    line-height: 0.5;
+    margin: 20px 0; }
+  .hero .column-5 {
+    text-align: center;
+    vertical-align: bottom; }
+    .hero .column-5.left-align {
+      text-align: left; }
+    .hero .column-5 img {
+      width: 291px;
+      height: 504px;
+      margin: 0 auto; }
 
 #mc_embed_signup {
   background: #fff;
@@ -1255,29 +1269,60 @@ h5 {
   margin-right: 10px; }
 
 .inline--button .inline__button {
-  width: 15%;
-  background-color: #18d3a2;
+  width: 167px;
+  height: 59px;
+  border-radius: 4px;
+  background-color: #3fd3a2;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
   text-align: center;
-  color: #2B2B2B;
-  border: 1px solid #9ad1bf;
-  font-weight: 500;
   line-height: 1.2; }
 
 .green {
-  color: #18d3a2; }
+  color: #FFF;
+  border-radius: 4px;
+  background-color: #3fd3a2;
+  font-size: 18px;
+  line-height: 1.44;
+  text-align: left !important;
+  padding: 15px 0 13px 72px;
+  background-image: url("/images/done-check@2.png");
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: 19px 11px;
+  opacity: 0;
+  display: none;
+  margin: 0.8rem 0;
+  transition: all 2s linear; }
+  .green.show {
+    display: block;
+    opacity: 1; }
 
 em {
   color: #CDCDCD; }
 
 .interesse {
   background-color: #FFF;
-  color: #2D2D2D;
+  color: #333;
   padding: 5% 0; }
+  .interesse .form__placeholder {
+    opacity: 1;
+    display: block;
+    transition: all 2s linear; }
+    .interesse .form__placeholder.hidden {
+      display: none;
+      opacity: 0; }
   .interesse h2 {
-    font-weight: 300;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.04; }
   .interesse p {
-    font-size: 1.2em; }
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.44; }
   .interesse img {
     margin: 8% 0; }
 
@@ -1295,15 +1340,41 @@ em {
   .feature.center-align {
     padding: 5% 0 0 0; }
     .feature.center-align h2 {
-      margin-top: 0; }
+      margin-top: 0;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.04;
+      color: #333333; }
+    .feature.center-align p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.44;
+      text-align: center;
+      color: #333333; }
+  .feature .column-3 {
+    color: #FFF; }
+    .feature .column-3 h2 {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.12; }
+    .feature .column-3 p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.44;
+      text-align: left; }
+  .feature .column-8.center-align {
+    text-align: center;
+    vertical-align: bottom; }
+    .feature .column-8.center-align img {
+      width: 291px;
+      height: 424px; }
   .feature h2 {
     margin-top: 25%;
-    font-weight: 300;
     margin-bottom: 15px; }
   .feature p {
     font-size: 1.2em; }
   .feature img {
-    margin: 8% 0; }
+    margin: 3% 0; }
 
 .preview {
   color: #2D2D2D; }

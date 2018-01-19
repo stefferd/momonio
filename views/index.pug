@@ -4,18 +4,17 @@ block content
   - let features = 0;
   .inner_content
     .logo
-      img.logo-img(src="/images/logo-momonio.png" alt="Momonio")
+      img.logo-img(src="/images/logo-momonio@2.png" width="151" height="59" alt="Momonio")
     .is-full
       if blocks && blocks.length > 0
         each block in blocks
           if block.template === 'hero'
             .row.hero
               .column-1=" "
-              .column-5
+              .column-5.left-align
                 p #{block.items[1].content}
                 a.button.button--primary(href="#interesse" title=block.items[0].content) #{block.items[0].content}
-              .column-2=" "
-              .column-3
+              .column-5
                 img(src=`/uploads/${block.items[2].content}` title="hero image")
               .column-1=" "
           else if block.template === 'preview'
@@ -40,8 +39,7 @@ block content
                 .column-3
                   h2 #{block.items[0].content}
                   p #{block.items[1].content}
-                .column-4=" "
-                .column-4.center-align
+                .column-8.center-align
                   img(src=`/uploads/${block.items[2].content}` title="feature image")
             else
               .row.feature.center-align
@@ -57,14 +55,12 @@ block content
           a(name="interesse")
           h2 Interesse? De Momonio app is nog niet helemaal klaar
           p Maar als je je e-mailadres achterlaat, zorgen we dat jij de app als eerste kunt gebruiken
-          if (!savedInterested)
-            form.form(method="POST" action="/")
-              .form__placeholder.inline--button
-                input(type="email" name="email" class="input input__field" placeholder="Uw email")
-                input(type="submit" value="Verstuur" class="input input__button inline__button")
-              em We gebruiken je e-mailadres nergens anders voor... beloofd
-          else
-            p.green Gelukt! We hebben je e-mailadres ontvangen. Je hoort snel van ons!
+
+            .form__placeholder.inline--button#interestedEmail
+              input(type="email" name="email" id="email" class="input input__field" placeholder="Uw email")
+              input(type="button" value="Verstuur" class="input input__button inline__button" onClick="registerInterested()")
+            p.green#interestedDone Gelukt! We hebben je e-mailadres ontvangen. Je hoort snel van ons!
+            em We gebruiken je e-mailadres nergens anders voor... beloofd
         .column-2=" "
 
 
