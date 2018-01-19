@@ -1273,7 +1273,8 @@ h5 {
       .hero p {
         text-align: center; }
       .hero .button--primary {
-        margin: 20px auto; }
+        margin: 20px auto;
+        font-size: 15px; }
       .hero .column-5.mobile {
         height: 463px; } }
 
