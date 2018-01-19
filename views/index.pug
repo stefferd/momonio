@@ -14,7 +14,7 @@ block content
               .column-5.left-align
                 p #{block.items[1].content}
                 a.button.button--primary(href="#interesse" title=block.items[0].content) #{block.items[0].content}
-              .column-5
+              .column-5.mobile
                 img(src=`/uploads/${block.items[2].content}` title="hero image")
               .column-1=" "
           else if block.template === 'preview'

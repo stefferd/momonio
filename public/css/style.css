@@ -1224,6 +1224,19 @@ h5 {
   width: 151px;
   height: 59px; }
 
+@media only screen and (min-width: 20em) {
+  .logo {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%; }
+    .logo img {
+      padding-top: 30px;
+      width: 151px;
+      height: 59px; } }
+
 .hero {
   background-color: #ef869c;
   background-image: url("/images/hero-bg.png");
@@ -1254,6 +1267,15 @@ h5 {
       width: 291px;
       height: 504px;
       margin: 0 auto; }
+  @media only screen and (min-width: 20em) {
+    .hero {
+      text-align: center; }
+      .hero p {
+        text-align: center; }
+      .hero .button--primary {
+        margin: 20px auto; }
+      .hero .column-5.mobile {
+        height: 463px; } }
 
 #mc_embed_signup {
   background: #fff;
@@ -1375,6 +1397,21 @@ em {
     font-size: 1.2em; }
   .feature img {
     margin: 3% 0; }
+  @media only screen and (min-width: 20em) {
+    .feature {
+      text-align: center; }
+      .feature h2 {
+        width: 100%;
+        margin-top: 20px; }
+      .feature p {
+        text-align: center;
+        width: 100%; }
+      .feature .button--primary {
+        margin: 20px auto; }
+      .feature .column-5.align-center {
+        height: 451px; }
+      .feature.feature-bg h2 {
+        margin-top: 20px; } }
 
 .preview {
   color: #2D2D2D; }
