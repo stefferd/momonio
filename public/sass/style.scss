@@ -81,11 +81,9 @@ h5 { font-size: 130%; }
   left: 1%;
   width: 151px;
   height: 59px;
-}
-@media #{$breakpoint-small} {
-  .logo {
+
+  @include respond-to('small') {
     margin: 0 auto;
-    position: absolute;
     top: 0;
     left: 0;
     text-align: center;
@@ -93,8 +91,17 @@ h5 { font-size: 130%; }
 
     img {
       padding-top: 30px;
-      width: 151px;
-      height: 59px;
+    }
+  }
+
+  @include respond-to('medium') {
+    top: 5%;
+    left: 1%;
+    width: 151px;
+    height: 59px;
+
+    img {
+      padding-top: 0;
     }
   }
 }
@@ -137,7 +144,8 @@ h5 { font-size: 130%; }
       margin: 0 auto;
     }
   }
-  @media #{$breakpoint-small} {
+
+  @include respond-to('small') {
     text-align: center;
 
     p {
@@ -151,6 +159,23 @@ h5 { font-size: 130%; }
 
     .column-5.mobile {
       height: 463px;
+    }
+  }
+
+  @include respond-to('medium') {
+    text-align: left;
+
+    p {
+      text-align: left;
+    }
+
+    .button--primary {
+      margin: 20px 0;
+      font-size: 17px;
+    }
+
+    .column-5.mobile {
+      height: auto;
     }
   }
 }
@@ -309,7 +334,7 @@ em {
     margin: 3% 0;
   }
 
-  @media #{$breakpoint-small} {
+  @include respond-to('small') {
     text-align: center;
 
     h2 {
@@ -319,6 +344,12 @@ em {
     p {
       text-align: center;
       width: 100%;
+    }
+
+    .column-3 {
+      p {
+        text-align: center;
+      }
     }
 
     .button--primary {
@@ -332,6 +363,35 @@ em {
     &.feature-bg h2 {
       margin-top: 20px;
     }
+  }
+
+  @include respond-to('medium') {
+    .center-aligned {
+      text-align: center;
+    }
+
+    h2 {
+      width: 100%;
+      margin-top: 20px;
+    }
+    p {
+      text-align: center;
+      width: 100%;
+    }
+
+    .button--primary {
+      margin: 20px 0;
+    }
+
+    .column-5.align-center {
+      height: auto;
+    }
+
+    &.feature-bg h2 {
+      margin-top: 0;
+      text-align: left;
+    }
+
   }
 }
 

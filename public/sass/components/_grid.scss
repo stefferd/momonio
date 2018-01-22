@@ -3,10 +3,25 @@ $grid-columns: 12;
 $grid-max-width: 100%;
 $grid-width: 100%;
 
+$breakpoints: (
+        'small':  ( min-width:  340px ),
+        'medium': ( min-width:  992px ),
+        'large':  ( min-width: 1200px )
+) !default;
 
-// breakpoints
-$breakpoint-small: "only screen and (min-width: 20em)";
-$breakpoint-medium: "only screen and (min-width: 30em)";
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}
 
 @mixin border-box {
   -webkit-box-sizing: border-box;
@@ -58,7 +73,7 @@ img {
   min-height: 1px;
 }
 
-@media #{$breakpoint-medium} {
+@include respond-to('medium') {
 
   .is-full {
     width: $grid-width;
