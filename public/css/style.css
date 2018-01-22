@@ -1438,6 +1438,8 @@ em {
     .feature p {
       text-align: center;
       width: 100%; }
+    .feature .column-3 p {
+      text-align: left; }
     .feature .button--primary {
       margin: 20px 0; }
     .feature .column-5.align-center {
