@@ -3,7 +3,7 @@ const router = express.Router();
 const { catchErrors } = require('../handlers/errorHandlers');
 const userController = require('./../controllers/userController');
 const authController = require('./../controllers/authController');
-const dashboardController = require('./../controllers/dashboardController');
+const interestedController = require('./../controllers/admin/interestedController');
 const adminController = require('../controllers/admin/adminController');
 const pagesController = require('../controllers/admin/pagesController');
 const blockController = require('../controllers/admin/blockController');
@@ -45,7 +45,11 @@ router.post('/admin/pages',
     pagesController.validate,
     pagesController.save
 );
-
+router.get('/admin/interested',
+    authController.isLoggedIn,
+    authController.isAdmin,
+    catchErrors(interestedController.home)
+);
 router.get('/admin/block-add/:id',
     authController.isLoggedIn,
     authController.isAdmin,

@@ -8,7 +8,7 @@ const mail = require('./../handlers/email');
 exports.login = passport.authenticate('local', {
     failureRedirect: '/admin/login',
     failureFlash: 'Failed login!',
-    successRedirect: '/admin/pages',
+    successRedirect: '/admin/interested',
     successFlash: 'You are now logged in!'
 });
 
@@ -20,7 +20,7 @@ exports.log = (req, res, next) => {
 exports.logout = (req, res) => {
     req.logout();
     req.flash('success', 'You are now logged out');
-    res.redirect('/');
+    res.redirect('/admin/login');
 };
 
 exports.isLoggedIn = (req, res, next) => {
@@ -29,7 +29,7 @@ exports.isLoggedIn = (req, res, next) => {
         return;
     }
     req.flash('error', 'Oops! you must be logged in to do that!');
-    res.redirect('/login');
+    res.redirect('/admin/login');
 };
 
 exports.isAdmin = (req, res, next) => {
@@ -38,7 +38,7 @@ exports.isAdmin = (req, res, next) => {
         return;
     }
     req.flash('error', 'Oops! you must be an admin to view the requested page');
-    res.redirect('/');
+    res.redirect('/admin/login');
 };
 
 exports.forgot = async (req, res) => {
